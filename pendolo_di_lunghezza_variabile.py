@@ -79,7 +79,7 @@ def animate_pendulum(t_vals, theta_vals, l_vals):
     ax.set_xlim((-2, 2))
     ax.set_ylim((-4, 2))
 
-    line, = ax.plot([], [], lw=2)
+    line, = ax.plot([], [], 'o-', lw=2)
 
     def init():
         line.set_data([], [])

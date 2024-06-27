@@ -74,7 +74,7 @@ x, y = pend.solve()
 # Animazione
 fig, ax = plt.subplots()
 ax.set_xlim(-1.1, 1.1)
-ax.set_ylim(-1.1, 1.1)
+ax.set_ylim(-1.5, 1.1)
 line, = ax.plot([], [], 'o-', lw=2)
 
 def init():
