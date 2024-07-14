@@ -1,4 +1,4 @@
-# Simulazione Pendolo 
+# Pendulumn simulations 
 
 Simple simulation of a classic pendulumn using Sympy, Numpy e Scipy. Thanks to matplotlib I was able to generate the .gif you can see.
 I'll try to implement other variants of the pendulumn.
@@ -12,7 +12,7 @@ and this quantity need to be the least possible considering a motion from an ins
 $$\frac{\partial \mathcal{L}}{\partial q_i} - \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_i} = 0$$
 
 where $q_i$ indicate the $i$-th generalised coordinate used to described the position of a body. In our case, for example, instead of using the cartesian coordinates (that are redondant even if I'll use them to represent the animation of the pendulum), we can use the polar coordinates where the position of a body  $(l(t), \theta(t))$ where $l(t)$ is the distance from the origin $O$ e $\theta(t)$ the angle that the body create with the $x$ axis. Naturally $(x, y) \xmapsto{\phi} (q_1, q_2)$ with $\phi$ a bijective function.
-In the case of the classic pendulum, where $l$ is fixed, our dinamycal system reduces to only a 1 degree of freedom system, so:
+In the case of the classic pendulumn, where $l$ is fixed, our dinamycal system reduces to only a 1 degree of freedom system, so:
 
 $$\frac{\partial \mathcal{L}}{\partial \theta} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\theta}} = 0$$
 
