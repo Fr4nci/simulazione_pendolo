@@ -1,16 +1,20 @@
 # Simulazione Pendolo 
 
-Semplice simulazione di un pendolo classico tramite la libreria Sympy, Numpy e Scipy. Tramite matplotlib ho generato anche l'immagine presente.
-Cercherò di implementare anche altre varianti del pendolo.
+Simple simulation of a classic pendulumn using Sympy, Numpy e Scipy. Thanks to matplotlib I was able to generate the .gif you can see.
+I'll try to implement other variants of the pendulumn.
 
-L'idea di base è quella di utilizzare il principio variazionale di minima azione, ovvero
+The basic idea is to use the variation principle of least action, that is the following
+
 $$\mathcal{S} = \int_{A}^B \mathcal{L}(q, \dot{q}, t)dt$$
-dev'essere tale da assumere il valore minimo possibile fra due istanti di tempo. Questo si traduce, di fatto, nella necessità di minimizzare il funzionale $\mathcal{S}$, imponendo le condizione di Eulero-Lagrange:
+
+and this quantity need to be the least possible considering a motion from an instant $t_A$ and $t_B$. This condition imply, as a matter of speaking, in finding a way to minimize the functional $\mathcal{S}$, by using the equation of Euler-Lagrange:
+
 $$\frac{\partial \mathcal{L}}{\partial q_i} - \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{q}_i} = 0$$
-dove $q_i$ indica la $i$-esima coordinata generalizzata usata per descrivere la posizione del nostro corpo. Nel caso del pendolo, per esempio, invece di utilizzare le coordinate cartesiane (che di fatto sono ridondandi anche se le utilizzeremo per rappresentare l'animazione del pendolo), possiamo utilizzare le coordinate polari dove la posizione del corpo è indicata da $(l(t), \theta(t))$ ovvero dalla distanza $l(t)$ dall'origine $O$ e l'angolo che forma con l'asse $x$. Naturalmente $(x, y) \xmapsto{\phi} (q_1, q_2)$ con $\phi$ funzione biunivoca, ovvero il passaggio fra coordinate cartesiane e le coordinate generalizzate deve avvenire tramite una funzione $\phi: \mathbb{R}^2 \to \mathbb{R}^2$ che sia invertibile.
-Nel caso del pendolo semplice queste equazioni, siccome $l$ fissato, si riduce a studiare il sistema ad un solo grado di libertà, dunque:
+
+where $q_i$ indicate the $i$-th generalised coordinate used to described the position of a body. In our case, for example, instead of using the cartesian coordinates (that are redondant even if I'll use them to represent the animation of the pendulum), we can use the polar coordinates where the position of a body  $(l(t), \theta(t))$ where $l(t)$ is the distance from the origin $O$ e $\theta(t)$ the angle that the body create with the $x$ axis. Naturally $(x, y) \xmapsto{\phi} (q_1, q_2)$ with $\phi$ a bijective function.
+In the case of the classic pendulum, where $l$ is fixed, our dinamycal system reduces to only a 1 degree of freedom system, so:
 $$\frac{\partial \mathcal{L}}{\partial \theta} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\theta}} = 0$$
-nel caso invece di $l(t)$ (ovvero $l(t) \neq l_0 \, \forall t$) con il filo che si comporta come un oscillatore armonico ideale allora bisogna studiare il seguente sistema di equazioni differenziali:
+in the case of $l(t)$ (that is $l(t) \neq l_0 \, \forall t$) with the wire acting as an ideal armonic oscillator, we have to study the following system of differential equations:
 ```math
 \begin{equation}\begin{cases} \frac{\partial \mathcal{L}}{\partial \theta} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\theta}} = 0 \\ \frac{\partial \mathcal{L}}{\partial l} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{l}} = 0 \\ \end{cases}\end{equation}
 ```
