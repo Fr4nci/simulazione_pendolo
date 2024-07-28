@@ -20,3 +20,6 @@ in the case of $l(t)$ (that is $l(t) \neq l_0 \, \forall t$) with the wire actin
 ```math
 \begin{equation}\begin{cases} \frac{\partial \mathcal{L}}{\partial \theta} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\theta}} = 0 \\ \frac{\partial \mathcal{L}}{\partial l} - \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{l}} = 0 \\ \end{cases}\end{equation}
 ```
+Some examples
+
+![pendulumn](https://github.com/Fr4nci/simulazione_pendolo/blob/main/moto_pendolo.gif)
